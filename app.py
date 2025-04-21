@@ -33,11 +33,11 @@ logger = logging.getLogger(__name__)
 def initialize_app():
     """Configure the Streamlit application."""
     st.set_page_config(
-        page_title="Molecule Generation Platform", 
+        page_title="3D Synthesis-based Molecule Generation", 
         layout="wide", 
         initial_sidebar_state="collapsed",
         menu_items={
-            'About': "Molecule Generation Platform | For research purposes only"
+            'About': "Structure-based drug design Platform | For research purposes only"
         }
     )
     
