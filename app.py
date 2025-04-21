@@ -87,7 +87,7 @@ def display_molecules(molecules, trajectories):
         molecules: List of molecule objects
     """
     import pandas as pd
-    from src.app.utils.visualization_utils import display_mol, display_mol_3d
+    from utils.visualization_utils import display_mol, display_mol_3d
     
     if not molecules:
         st.warning("No molecules generated.")
@@ -141,7 +141,7 @@ def display_molecules(molecules, trajectories):
     if molecules:
         st.divider()
         try:
-            from src.app.utils.molecule_utils import download_ligands_as_sdf
+            from utils.molecule_utils import download_ligands_as_sdf
             sdf_data = download_ligands_as_sdf(molecules)
             st.download_button(
                 label="Download All Molecules (SDF)",
@@ -160,7 +160,7 @@ def _display_single_molecule(row, traj):
         row: DataFrame row with molecule data
         traj: Trajectory data for the molecule
     """
-    from src.app.utils.visualization_utils import display_mol, display_mol_3d
+    from utils.visualization_utils import display_mol, display_mol_3d
     from rdkit import Chem
     
     st.divider()
