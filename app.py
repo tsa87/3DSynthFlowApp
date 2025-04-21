@@ -413,7 +413,7 @@ def main():
         
         # Generate button
         if st.button("Generate Molecules"):
-            with st.spinner("Generating molecules..."):
+            with st.spinner("Generating molecules... Due to server limitations, this may take up to 5 minutes..."):
                 # If using example protein, use the cached results
                 if st.session_state.get('is_example_protein', False):
                     # Use the cached results for the example protein
