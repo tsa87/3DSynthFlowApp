@@ -379,8 +379,8 @@ def main():
         st.subheader("Generate Molecules")
         
         # Add display options in a small expander
-        with st.expander("Display Options"):
-            st.session_state.rotate_molecules = st.checkbox("Rotate 3D molecules", value=st.session_state.rotate_molecules)
+        # with st.expander("Display Options"):
+        #     st.session_state.rotate_molecules = st.checkbox("Rotate 3D molecules", value=st.session_state.rotate_molecules)
         
         # Binding site parameters
         st.markdown("#### Binding Site Parameters")
