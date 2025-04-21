@@ -5,3 +5,4 @@ stmol
 ipython_genutils
 rdkit
 matplotlib
+seaborn
