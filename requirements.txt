@@ -1,0 +1,5 @@
+cog
+replicate
+streamlit
+stmol
+ipython_genutils
