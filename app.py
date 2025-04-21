@@ -15,12 +15,10 @@ import requests
 from rdkit import Chem
 import numpy as np  # For centroid calculation
 
-# Add the src directory to the path so we can use absolute imports
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-from src.app.utils.molecule_utils import get_ligands_for_protein
-from src.app.utils.protein_utils import extract_region_from_pdb
-from src.app.utils.consts import ADRB_CACHED_RESPONSE, ADRB_CENTER, ADRB_POCKET_PDB_FILE
+from utils.molecule_utils import get_ligands_for_protein
+from utils.protein_utils import extract_region_from_pdb
+from utils.consts import ADRB_CACHED_RESPONSE, ADRB_CENTER, ADRB_POCKET_PDB_FILE
 
 # Configure logging
 logging.basicConfig(
