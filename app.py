@@ -371,9 +371,9 @@ def main():
         st.markdown("## 3DSynthFlow: 3D Synthesis-based Molecule Generation")
         
 
-        st.markdown("### 📄 Demo information")
+        # st.markdown("### Demo information")
 
-        with st.expander("Important usage information"):
+        with st.expander("📄 Important usage information"):
             st.markdown(
                 """
                 This demo shows the types of molecules and synthesis trajectory produced by 3DSynthFlow. 
