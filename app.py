@@ -381,7 +381,7 @@ def main():
                 and is for demo and research purposes only.
                 - For practical drug discovery tasks, user are highly encouraged to finetune the 3DSynthFlow model
                 on their protein target of interest first.
-                - If you're interested in finetuning 3DSynthFlow for your target, please do not hesiate to reach our to use.
+                - If you're interested in finetuning 3DSynthFlow for your target, please reach out to us.
                 """
             )
 
