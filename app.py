@@ -172,7 +172,7 @@ def _display_single_molecule(row, traj):
     with structure_col1:
         st.markdown("##### 2D Structure")
         try:
-            svg = display_mol(row["Structure"])
+            svg = display_mol(row["Structure"], width=200, height=200)
             st.markdown(f"<div>{svg}</div>", unsafe_allow_html=True)
         except Exception as e:
             st.warning(f"Error displaying 2D structure: {str(e)}")
@@ -189,7 +189,7 @@ def _display_single_molecule(row, traj):
                 AllChem.EmbedMolecule(mol)
                 AllChem.MMFFOptimizeMolecule(mol)
             # Display 3D structure, using rotation preference from session state
-            display_mol_3d(mol, width=300, height=300, style="stick", surface=False, 
+            display_mol_3d(mol, width=200, height=200, style="stick", surface=False, 
                           spin=st.session_state.rotate_molecules)
         except Exception as e:
             st.warning(f"Error displaying 3D structure: {str(e)}")
@@ -256,7 +256,7 @@ def _display_single_molecule(row, traj):
                     if block["smiles"]:
                         mol = Chem.MolFromSmiles(block["smiles"])
                         if mol:
-                            svg = display_mol(mol, width=100, height=100)
+                            svg = display_mol(mol, width=60, height=60)
                             st.markdown(f"<div style='text-align: center;'>{svg}</div>", unsafe_allow_html=True)
                             
                             # Display building block name
@@ -271,11 +271,11 @@ def _display_single_molecule(row, traj):
                     # Add reaction type to the arrow
                     reaction_label = reaction_types[i-1] if i-1 < len(reaction_types) else ""
                     arrow_html = f"""
-                    <div style='text-align: center; margin-top: 30px;'>
-                        <div style='font-size: 12px; color: #555; font-weight: bold; margin-bottom: 8px;'>{reaction_label}</div>
+                    <div style='text-align: center; margin-top: 20px;'>
+                        <div style='font-size: 10px; color: #555; font-weight: bold; margin-bottom: 5px;'>{reaction_label}</div>
                         <div style='display: flex; align-items: center; justify-content: center;'>
-                            <div style='height: 3px; background-color: #000; width: 80%; margin-right: 1px;'></div>
-                            <div style='width: 0; height: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 12px solid #000;'></div>
+                            <div style='height: 2px; background-color: #000; width: 60%; margin-right: 1px;'></div>
+                            <div style='width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 8px solid #000;'></div>
                         </div>
                     </div>
                     """
@@ -379,8 +379,8 @@ def main():
         st.subheader("Generate Molecules")
         
         # Add display options in a small expander
-        with st.expander("Display Options"):
-            st.session_state.rotate_molecules = st.checkbox("Rotate 3D molecules", value=st.session_state.rotate_molecules)
+        # with st.expander("Display Options"):
+        #     st.session_state.rotate_molecules = st.checkbox("Rotate 3D molecules", value=st.session_state.rotate_molecules)
         
         # Binding site parameters
         st.markdown("#### Binding Site Parameters")
