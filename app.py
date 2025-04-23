@@ -376,12 +376,12 @@ def main():
         with st.expander("📄 Important usage information"):
             st.markdown(
                 """
-                This demo shows the types of molecules and synthesis trajectory produced by 3DSynthFlow. 
-                The underlying model shown here is 3DSynthFlow trained under the pocket-conditional setting
+                - This demo shows the types of molecules and synthesis trajectory produced by 3DSynthFlow. 
+                - The underlying model shown here is 3DSynthFlow trained under the pocket-conditional setting
                 and is for demo and research purposes only.
-                For practical drug discovery tasks, user are highly encouraged to finetune the 3DSynthFlow model
+                - For practical drug discovery tasks, user are highly encouraged to finetune the 3DSynthFlow model
                 on their protein target of interest first.
-                If you're interested in finetuning 3DSynthFlow for your target, please do not hesiate to reach our to use.
+                - If you're interested in finetuning 3DSynthFlow for your target, please do not hesiate to reach our to use.
                 """
             )
 
