@@ -368,8 +368,33 @@ def main():
         initialize_app()
         
         # Header
-        st.title("3DSynthFlow: 3D Synthesis-based Molecule Generation")
+        st.markdown("## 3DSynthFlow: 3D Synthesis-based Molecule Generation")
         
+
+        st.markdown("### 📄 Paper and Contact Info")
+
+        with st.expander("🔗 Paper Link & Contact"):
+            st.markdown(
+                """
+                **Paper:** [Compositional Flows for 3D Molecule and Synthesis Pathway Co-design](https://arxiv.org/abs/2504.08051)  
+                **Contact:** [tonyzshen@gmail.com](mailto:tonyzshen@gmail.com)
+                """
+            )
+
+        with st.expander("📚 Citation"):
+            st.code(
+                """@misc{shen2025compositionalflows3dmolecule,
+        title={Compositional Flows for 3D Molecule and Synthesis Pathway Co-design}, 
+        author={Tony Shen and Seonghwan Seo and Ross Irwin and Kieran Didi and Simon Olsson and Woo Youn Kim and Martin Ester},
+        year={2025},
+        eprint={2504.08051},
+        archivePrefix={arXiv},
+        primaryClass={cs.LG},
+        url={https://arxiv.org/abs/2504.08051},
+        }""",
+                language="bibtex"
+            )
+
         # Protein upload section (without visualization)
         protein_file = upload_protein_section()
         
