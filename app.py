@@ -368,7 +368,7 @@ def main():
         initialize_app()
         
         # Header
-        st.title("Molecule Generation Platform")
+        st.title("3DSynthFlow: 3D Synthesis-based Molecule Generation")
         
         # Protein upload section (without visualization)
         protein_file = upload_protein_section()
