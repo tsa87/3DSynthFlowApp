@@ -389,7 +389,7 @@ def main():
             st.markdown(
                 """
                 **Paper:** [Compositional Flows for 3D Molecule and Synthesis Pathway Co-design](https://arxiv.org/abs/2504.08051)  
-                **Contact:** [tonyzshen@gmail.com](mailto:tonyzshen@gmail.com)
+                **Contact:** [tonyzshen@gmail.com](mailto:tonyzshen@gmail.com), [shwan0106@kaist.ac.kr](mailto:shwan0106@kaist.ac.kr)
                 """
             )
 
